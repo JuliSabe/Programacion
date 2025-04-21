@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truco Holdem // Sala de Espera</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="console-container">
+        <header>
+            <h1 class="console-title">// SALA DE ESPERA</h1>
+            <p class="console-prompt">Sistema en línea...<span class="blink">_</span></p>
+        </header>
+
+        <main>
+            <!-- Información del usuario logueado (esto se llenaría dinámicamente con JS/Backend) -->
+            <div class="user-info">
+                <p>// USUARIO: <span class="user-detail">[Nombre_de_Usuario]</span></p>
+                <p>// FICHAS: <span class="user-detail">[Cantidad_de_Fichas]</span></p>
+            </div>
+
+            <p class="tagline">> Ingrese comando:</p>
+
+            <!-- Lista de comandos/acciones en la sala de espera -->
+            <ul class="command-list">
+                <li><a href="#" data-command="create_game">Crear Nueva Partida</a></li>
+                <li><a href="#" data-command="find_game">Buscar Partida Rápida</a></li>
+                <!-- En el futuro, aquí iría una lista de partidas disponibles para unirse -->
+                <!-- <li>> PARTIDAS DISPONIBLES:</li>
+                <li>- Partida de [Oponente1] (2/2) <a href="#" data-game-id="xyz">[Unirse]</a></li>
+                <li>- Partida de [Oponente2] (1/2) <a href="#" data-game-id="abc">[Unirse]</a></li> -->
+                <li><a href="index.html" data-command="logout">Cerrar Sesión</a></li>
+            </ul>
+        </main>
+
+        <footer>
+             <!-- Puedes añadir enlaces a reglas, rankings, etc. aquí más adelante -->
+            <p class="console-info">> 2024 // Sistema 3.14a</p>
+        </footer>
+    </div>
+
+    <!-- Script para manejar interactividad (login, unirse, crear, etc.) -->
+    <!-- <script src="lobby.js"></script> -->
+</body>
+</html>

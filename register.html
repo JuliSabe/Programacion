@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truco Holdem // Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="console-container">
+        <header>
+            <h1 class="console-title">// CREAR NUEVA CUENTA</h1>
+            <p class="console-prompt">Complete los campos:<span class="blink">_</span></p>
+        </header>
+
+        <main class="auth-form">
+             <!-- El formulario de registro -->
+            <form id="registerForm" action="#" method="post"> <!-- action y method son temporales -->
+                <div class="form-group">
+                    <label for="username">// Nombre de Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                 <div class="form-group">
+                    <label for="email">// Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">// Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                 <div class="form-group">
+                    <label for="confirm_password">// Confirmar Contraseña:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <button type="submit" class="btn-console">> CREAR CUENTA</button>
+            </form>
+        </main>
+
+        <footer>
+            <!-- Enlaces para navegar -->
+            <p class="console-info">
+                 > <a href="login.html">Ya tengo cuenta</a><br>
+                > <a href="index.html">Volver a Inicio</a>
+            </p>
+            <p class="console-info">// Terminal Segura // Versión 3.14a</p>
+        </footer>
+    </div>
+</body>
+</html>
