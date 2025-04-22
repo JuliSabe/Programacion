@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truco Holdem // Sistema 3.14a</title> <!-- Título más estilo consola -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <!-- Enlace a fuentes de Google Fonts con estética de código/terminal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,15 +24,15 @@
 <main class="command-list">
     <ul>
         <!-- Cambiar href="#" por el nombre del archivo -->
-        <li><a href="login.html" data-command="jugar">Jugar Partida</a></li>
-        <li><a href="login.html" data-command="login">Acceder al Sistema</a></li>
-        <li><a href="register.html" data-command="register">Crear Nuevo Usuario</a></li>
+        <li><a href="{{ url_for('login') }}" data-command="jugar">Jugar Partida</a></li>
+        <li><a href="{{ url_for('login') }}" data-command="login">Acceder al Sistema</a></li>
+        <li><a href="{{ url_for('register') }}" data-command="register">Crear Nuevo Usuario</a></li>
     </ul>
 </main>
 <!-- ... (código posterior) ... -->
         <footer>
                     <!-- ... otros enlaces y texto ... -->
-                    > <a href="lobby.html">Ir a Sala de Espera (Demo)</a><br>
+                    > <a href="{{ url_for('lobby') }}">Ir a Sala de Espera (Demo)</a><br>
                     <!-- ... (el resto del pie de página) ... -->    
             <!-- Pie de página con info básica -->
             <p class="console-info">> 2024 // Terminal Segura // Versión 3.14a</p>

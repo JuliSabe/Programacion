@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truco Holdem // Acceso</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -34,8 +34,8 @@
         <footer>
             <!-- Enlaces para navegar -->
             <p class="console-info">
-                > <a href="register.html">Crear Nuevo Usuario</a><br>
-                > <a href="index.html">Volver a Inicio</a>
+                > <a href="{{ url_for('register') }}">Crear Nuevo Usuario</a><br>
+                > <a href="{{ url_for('index') }}">Volver a Inicio</a>
             </p>
             <p class="console-info">// Terminal Segura // Versión 3.14a</p>
         </footer>

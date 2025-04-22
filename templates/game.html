@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truco Holdem // Partida #</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="console-container game-container">
+        <header>
+            <h1 class="console-title">// PARTIDA EN CURSO</h1>
+            <!-- Estos span se actualizarán con JS -->
+            <p class="console-prompt">Ronda <span id="current-round">...</span> / Turno de <span id="current-turn">...</span><span class="blink">_</span></p>
+        </header>
+
+        <main class="game-area">
+            <!-- Área del oponente -->
+            <div class="opponent-area">
+                <p class="player-name opponent-name">Computadora</p>
+                <div class="opponent-hand">
+                    <!-- Cartas del oponente boca abajo (se llenan con JS) -->
+                </div>
+                 <p class="player-score opponent-score">// Puntos: <span id="opponent-points">0</span></p>
+            </div>
+
+            <!-- Área de la mesa -->
+            <div class="table-area">
+                <p>// MESA</p>
+                <!-- Contenedor para las dos cartas jugadas en la ronda actual -->
+                <!-- Usaremos flexbox en columna para apilarlas -->
+                <div class="cards-played-round">
+                     <!-- Slots específicos para la carta del oponente y la tuya en la ronda -->
+                     <div id="opponent-played-card" class="played-card-slot opponent-slot">
+                         <!-- Carta del oponente en la ronda (se llena con JS) -->
+                     </div>
+                     <div id="player-played-card" class="played-card-slot player-slot">
+                         <!-- Tu carta en la ronda (se llena con JS) -->
+                     </div>
+                </div>
+            </div>
+
+            <!-- Área del jugador -->
+            <div class="player-area">
+                <p class="player-name your-name">// TU MANO</p>
+                <div class="player-hand">
+                    <!-- Tus cartas (se llenan con JS) -->
+                </div>
+                <p class="player-score your-score">// Puntos: <span id="your-points">0</span></p>
+            </div>
+
+        </main>
+
+        <!-- Área de Mensajes y Acciones -->
+        <div class="game-controls">
+            <div class="messages-area">
+                <p>// LOG DEL SISTEMA</p>
+                <div id="game-messages" class="message-log">
+                    <!-- Mensajes del juego (se llenan con JS) -->
+                </div>
+            </div>
+
+            <div class="actions-area">
+                 <p>// ACCIONES DISPONIBLES</p>
+                 <ul id="available-actions" class="command-list">
+                     <!-- Acciones clicables (se llenan/actualizan con JS) -->
+                     <!-- El JS llenará esta lista -->
+                 </ul>
+            </div>
+        </div>
+
+
+        <footer>
+            <p class="console-info">> 2024 // Partida Segura // Versión 3.14a</p>
+            <p class="console-info">
+                 > <a href="{{ url_for('lobby') }}">Volver a Sala de Espera</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- ENLACE AL ARCHIVO JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
